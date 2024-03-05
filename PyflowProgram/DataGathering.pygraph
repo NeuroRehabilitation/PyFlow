@@ -1,0 +1,411 @@
+{
+    "name": "root",
+    "category": "",
+    "vars": [],
+    "nodes": [
+        {
+            "package": "CSVController",
+            "lib": null,
+            "type": "Write_CSV",
+            "owningGraphName": "root",
+            "name": "Write_CSV",
+            "uuid": "beda9ebe-5428-4c9c-ae23-34585dadb974",
+            "inputs": [
+                {
+                    "name": "Data",
+                    "package": "PyFlowBase",
+                    "fullName": "Write_CSV_Data",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": "\"{'Stream2': {'playerLife': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'score': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'time': [262.02471923828125, 262.01043701171875, 262.0042724609375, 261.9910583496094, 261.984619140625, 261.9721984863281, 261.96417236328125, 261.9534912109375, 261.94183349609375, 261.93505859375, 261.922607421875, 261.9107360839844, 261.9054870605469]}}\"",
+                    "uuid": "34730032-8edb-41fa-ac3e-67cc71140b02",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Reader3",
+                            "outPinId": 2,
+                            "rhsNodeName": "Write_CSV",
+                            "inPinId": 3,
+                            "lhsNodeUid": "fb1b6f79-cf50-4df0-9da1-c83af868a7aa",
+                            "rhsNodeUid": "beda9ebe-5428-4c9c-ae23-34585dadb974"
+                        }
+                    ],
+                    "pinIndex": 3,
+                    "options": [
+                        1,
+                        2,
+                        8,
+                        16,
+                        256,
+                        512,
+                        1024
+                    ],
+                    "structure": 3,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Data",
+                        "wires": {
+                            "3": {
+                                "sourceUUID": "af166d66-5ff5-4619-93a8-2b06be6e8845",
+                                "destinationUUID": "34730032-8edb-41fa-ac3e-67cc71140b02",
+                                "sourceName": "LSL_Reader3_Data",
+                                "destinationName": "Write_CSV_Data",
+                                "uuid": "1d7cfe1e-b17e-432d-9e17-3248668c07d9",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    },
+                    "currDataType": "StringPin"
+                },
+                {
+                    "name": "inExec",
+                    "package": "PyFlowBase",
+                    "fullName": "Write_CSV_inExec",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "6a859326-a857-492e-826b-86c3d0a0e311",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Reader3",
+                            "outPinId": 1,
+                            "rhsNodeName": "Write_CSV",
+                            "inPinId": 1,
+                            "lhsNodeUid": "fb1b6f79-cf50-4df0-9da1-c83af868a7aa",
+                            "rhsNodeUid": "beda9ebe-5428-4c9c-ae23-34585dadb974"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "inExec",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "abe596ec-ed5a-4f94-962e-329c84089dd6",
+                                "destinationUUID": "6a859326-a857-492e-826b-86c3d0a0e311",
+                                "sourceName": "LSL_Reader3_OUT",
+                                "destinationName": "Write_CSV_inExec",
+                                "uuid": "ac91ef6e-f13f-4c54-9bc1-3ee9569d6063",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "FileName",
+                    "package": "PyFlowBase",
+                    "fullName": "Write_CSV_FileName",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"Player0\"",
+                    "uuid": "d7e8d2cb-5848-426c-a9f8-f9a698eb9b4f",
+                    "linkedTo": [],
+                    "pinIndex": 2,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "FileName",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "outExec",
+                    "package": "PyFlowBase",
+                    "fullName": "Write_CSV_outExec",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "c9b48db5-070e-413a-8381-a65ab78e393f",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "outExec",
+                        "wires": {}
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "Write_CSV"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Write_CSV</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -152.0,
+            "y": -129.0
+        },
+        {
+            "package": "LSLController",
+            "lib": null,
+            "type": "LSL_Reader3",
+            "owningGraphName": "root",
+            "name": "LSL_Reader3",
+            "uuid": "fb1b6f79-cf50-4df0-9da1-c83af868a7aa",
+            "inputs": [
+                {
+                    "name": "Begin",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_Begin",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "1244fd84-5380-429b-b2aa-464360961f03",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Begin",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Name",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_Name",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"Stream2\"",
+                    "uuid": "7ada209f-42ca-4058-b88a-03d45364cfa9",
+                    "linkedTo": [],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Name",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Stop",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_Stop",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "b01a5adf-9aa2-418e-a71f-ededbaa760bd",
+                    "linkedTo": [],
+                    "pinIndex": 2,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "OUT",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_OUT",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "abe596ec-ed5a-4f94-962e-329c84089dd6",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Reader3",
+                            "outPinId": 1,
+                            "rhsNodeName": "Write_CSV",
+                            "inPinId": 1,
+                            "lhsNodeUid": "fb1b6f79-cf50-4df0-9da1-c83af868a7aa",
+                            "rhsNodeUid": "beda9ebe-5428-4c9c-ae23-34585dadb974"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "OUT",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "abe596ec-ed5a-4f94-962e-329c84089dd6",
+                                "destinationUUID": "6a859326-a857-492e-826b-86c3d0a0e311",
+                                "sourceName": "LSL_Reader3_OUT",
+                                "destinationName": "Write_CSV_inExec",
+                                "uuid": "ac91ef6e-f13f-4c54-9bc1-3ee9569d6063",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Info",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_Info",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "511b1042-c063-4369-9238-de82c76a988c",
+                    "linkedTo": [],
+                    "pinIndex": 3,
+                    "options": [
+                        16,
+                        256,
+                        512
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Info",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Data",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Reader3_Data",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": "\"{'Stream2': {'playerLife': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'score': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'time': [262.02471923828125, 262.01043701171875, 262.0042724609375, 261.9910583496094, 261.984619140625, 261.9721984863281, 261.96417236328125, 261.9534912109375, 261.94183349609375, 261.93505859375, 261.922607421875, 261.9107360839844, 261.9054870605469]}}\"",
+                    "uuid": "af166d66-5ff5-4619-93a8-2b06be6e8845",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Reader3",
+                            "outPinId": 2,
+                            "rhsNodeName": "Write_CSV",
+                            "inPinId": 3,
+                            "lhsNodeUid": "fb1b6f79-cf50-4df0-9da1-c83af868a7aa",
+                            "rhsNodeUid": "beda9ebe-5428-4c9c-ae23-34585dadb974"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        16,
+                        256,
+                        512
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Data",
+                        "wires": {
+                            "3": {
+                                "sourceUUID": "af166d66-5ff5-4619-93a8-2b06be6e8845",
+                                "destinationUUID": "34730032-8edb-41fa-ac3e-67cc71140b02",
+                                "sourceName": "LSL_Reader3_Data",
+                                "destinationName": "Write_CSV_Data",
+                                "uuid": "1d7cfe1e-b17e-432d-9e17-3248668c07d9",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    },
+                    "currDataType": "StringPin"
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "LSL_Reader3"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LSL_Reader3</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -456.0,
+            "y": -128.0
+        }
+    ],
+    "depth": 1,
+    "isRoot": true,
+    "parentGraphName": "None",
+    "fileVersion": "2.0.1",
+    "activeGraph": "root"
+}
