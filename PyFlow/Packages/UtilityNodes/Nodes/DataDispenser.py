@@ -22,8 +22,7 @@ class DataDispenser(NodeBase):
         self.Begin_Out = self.createOutputPin("Start", 'ExecPin')
         self.End_Out = self.createOutputPin("Stop", 'ExecPin')
 
-        self.LastValue = self.createOutputPin('LastValue', 'AnyPin', structure=StructureType.Multi)
-        self.LastValue.enableOptions(PinOptions.AllowAny)
+        self.LastValue = self.createOutputPin('LastValue', 'FloatPin')
 
         self.bWorking = False
 
@@ -60,7 +59,7 @@ class DataDispenser(NodeBase):
                 self.Send.setData(data[Stream][Channel])
                 if len(data[Stream][Channel]) != 0:
                     value = {Channel: data[Stream][Channel][-1]}
-                    self.LastValue.setData(value)
+                    self.LastValue.setData(data[Stream][Channel][-1])
 
     def start(self, *args, **kwargs):
         self.bWorking = True
