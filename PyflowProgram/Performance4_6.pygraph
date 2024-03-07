@@ -1,0 +1,1493 @@
+{
+    "name": "root",
+    "category": "",
+    "vars": [],
+    "nodes": [
+        {
+            "package": "PyFlowBase",
+            "lib": null,
+            "type": "commentNode",
+            "owningGraphName": "root",
+            "name": "Implicit",
+            "uuid": "a62d30ce-c54f-48a8-b435-4a414b10934b",
+            "inputs": [],
+            "outputs": [],
+            "meta": {
+                "var": {},
+                "label": "Implicit"
+            },
+            "wrapper": {
+                "resize": {
+                    "w": 756.7800103099652,
+                    "h": 276.0
+                },
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Implicit</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                },
+                "owningNodes": [
+                    "PIDController",
+                    "Sensors_Data",
+                    "LSL_Outlet",
+                    "LSL_Inlet"
+                ],
+                "color": 889192448
+            },
+            "x": -374.40781288133593,
+            "y": -113.82780558685108
+        },
+        {
+            "package": "LSLController",
+            "lib": null,
+            "type": "SingleStreamReceiver",
+            "owningGraphName": "root",
+            "name": "LSL_Inlet",
+            "uuid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+            "inputs": [
+                {
+                    "name": "Stop",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Stop",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "51609902-ee32-427b-a823-670e6e2883dd",
+                    "linkedTo": [],
+                    "pinIndex": 2,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Begin",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Begin",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "6116ef93-4c2a-470c-8452-ce00b5358238",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Begin",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Name",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Name",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"Emteq\"",
+                    "uuid": "d6e30c14-e584-4b60-9a8a-29145d8b2524",
+                    "linkedTo": [],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Name",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Markers",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Markers",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"\"",
+                    "uuid": "9647c07e-18f1-450f-a0cf-a644da30b93a",
+                    "linkedTo": [],
+                    "pinIndex": 4,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Markers",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Stop1",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Stop1",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "becf200e-fe50-43fb-88f4-6b017f902b06",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 4,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 2,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 4,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop1",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "becf200e-fe50-43fb-88f4-6b017f902b06",
+                                "destinationUUID": "0b07f246-5711-4108-acde-d10eb48f044a",
+                                "sourceName": "LSL_Inlet_Stop1",
+                                "destinationName": "Sensors_Data_Stop",
+                                "uuid": "ef0b7094-270f-43cf-9667-4b41c2907338",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Data",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Data",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "dcb9eb40-cfd2-44b6-85b1-beeaca6b93fd",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 1,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 4,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        1,
+                        2,
+                        16,
+                        256,
+                        512
+                    ],
+                    "structure": 3,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Data",
+                        "wires": {
+                            "4": {
+                                "sourceUUID": "dcb9eb40-cfd2-44b6-85b1-beeaca6b93fd",
+                                "destinationUUID": "94345f07-4976-4812-84a4-6d6342019cfc",
+                                "sourceName": "LSL_Inlet_Data",
+                                "destinationName": "Sensors_Data_InData",
+                                "uuid": "b35b1641-920b-4957-aa3b-0f1078f864dd",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Start",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Start",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "2a0083b7-ed15-41f5-a22e-c7def83eb5dd",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 2,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 1,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Start",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "2a0083b7-ed15-41f5-a22e-c7def83eb5dd",
+                                "destinationUUID": "f3161f4d-06a9-4c8c-aef8-9c02aca48759",
+                                "sourceName": "LSL_Inlet_Start",
+                                "destinationName": "Sensors_Data_Begin",
+                                "uuid": "776d1666-e0b0-4519-9b17-12b108718e20",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Action",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Inlet_Action",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "30ed9bd3-f6de-460c-b175-7dee4f482e16",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 3,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 2,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Action",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "30ed9bd3-f6de-460c-b175-7dee4f482e16",
+                                "destinationUUID": "5a8889d5-344b-4a61-b29a-e1d30b8da74c",
+                                "sourceName": "LSL_Inlet_Action",
+                                "destinationName": "PIDController_Action",
+                                "uuid": "a9573145-7eb8-437d-a2b8-8c2b3e951fb0",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "LSL_Inlet"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LSL_Inlet</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -343.6191343401577,
+            "y": -34.2021370680602
+        },
+        {
+            "package": "EmteqPro",
+            "lib": null,
+            "type": "SensorsEmteq2",
+            "owningGraphName": "root",
+            "name": "Sensors_Data",
+            "uuid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+            "inputs": [
+                {
+                    "name": "Begin",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_Begin",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "f3161f4d-06a9-4c8c-aef8-9c02aca48759",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 2,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 1,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Begin",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "2a0083b7-ed15-41f5-a22e-c7def83eb5dd",
+                                "destinationUUID": "f3161f4d-06a9-4c8c-aef8-9c02aca48759",
+                                "sourceName": "LSL_Inlet_Start",
+                                "destinationName": "Sensors_Data_Begin",
+                                "uuid": "776d1666-e0b0-4519-9b17-12b108718e20",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Name",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_Name",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"HR_Current\"",
+                    "uuid": "4e899fd7-ece9-4be6-8d05-6090425619c3",
+                    "linkedTo": [],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Name",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "InData",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_InData",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "94345f07-4976-4812-84a4-6d6342019cfc",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 1,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 4,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 4,
+                    "options": [
+                        1,
+                        2,
+                        8,
+                        16,
+                        256,
+                        512,
+                        1024
+                    ],
+                    "structure": 3,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "InData",
+                        "wires": {
+                            "4": {
+                                "sourceUUID": "dcb9eb40-cfd2-44b6-85b1-beeaca6b93fd",
+                                "destinationUUID": "94345f07-4976-4812-84a4-6d6342019cfc",
+                                "sourceName": "LSL_Inlet_Data",
+                                "destinationName": "Sensors_Data_InData",
+                                "uuid": "b35b1641-920b-4957-aa3b-0f1078f864dd",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Stop",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_Stop",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "0b07f246-5711-4108-acde-d10eb48f044a",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 4,
+                            "rhsNodeName": "Sensors_Data",
+                            "inPinId": 2,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "becf200e-fe50-43fb-88f4-6b017f902b06",
+                                "destinationUUID": "0b07f246-5711-4108-acde-d10eb48f044a",
+                                "sourceName": "LSL_Inlet_Stop1",
+                                "destinationName": "Sensors_Data_Stop",
+                                "uuid": "ef0b7094-270f-43cf-9667-4b41c2907338",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Start",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_Start",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "e06c7f50-eeb4-45fb-8d62-1ae981a32085",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 2,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 1,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Start",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "e06c7f50-eeb4-45fb-8d62-1ae981a32085",
+                                "destinationUUID": "110fb658-d5fe-41b1-a471-19ab77188913",
+                                "sourceName": "Sensors_Data_Start",
+                                "destinationName": "PIDController_Begin",
+                                "uuid": "d5bbbe84-0f19-4e63-8de8-27d54202777a",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Stop1",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_Stop1",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "5977299b-6ad3-4e58-8428-31aa37957c37",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 3,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 3,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop1",
+                        "wires": {
+                            "3": {
+                                "sourceUUID": "5977299b-6ad3-4e58-8428-31aa37957c37",
+                                "destinationUUID": "034e8ba0-513b-440c-bcec-2099c80bafca",
+                                "sourceName": "Sensors_Data_Stop1",
+                                "destinationName": "PIDController_Stop",
+                                "uuid": "8c464695-d5e0-44c5-944d-df5e5ddbe955",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "DataOut",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_DataOut",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": "[93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375]",
+                    "uuid": "496a28d6-f9b8-43d0-94e0-78bc98e2f5a5",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 1,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 14,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256,
+                        512
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "DataOut",
+                        "wires": {
+                            "14": {
+                                "sourceUUID": "496a28d6-f9b8-43d0-94e0-78bc98e2f5a5",
+                                "destinationUUID": "41d54fb9-8cd1-468b-94ef-b103c8d9de9b",
+                                "sourceName": "Sensors_Data_DataOut",
+                                "destinationName": "PIDController_Performance",
+                                "uuid": "eb95eb99-429c-4fcb-ae8f-a634bc2391e7",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    },
+                    "currDataType": "FloatPin"
+                },
+                {
+                    "name": "LastValue",
+                    "package": "PyFlowBase",
+                    "fullName": "Sensors_Data_LastValue",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "73055260-5505-4eae-9920-992f2bda862c",
+                    "linkedTo": [],
+                    "pinIndex": 4,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "LastValue",
+                        "wires": {}
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "Sensors_Data"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Sensors_Data</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -152.9731427808064,
+            "y": -25.460146066573532
+        },
+        {
+            "package": "PIDController",
+            "lib": null,
+            "type": "PIDNode2",
+            "owningGraphName": "root",
+            "name": "PIDController",
+            "uuid": "73295956-d19a-47b6-87ab-cdadaed6cca9",
+            "inputs": [
+                {
+                    "name": "KP",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_KP",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "0.001",
+                    "uuid": "b19d0985-5616-4842-b42e-26f182fdff65",
+                    "linkedTo": [],
+                    "pinIndex": 6,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "KP",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Begin",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Begin",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "110fb658-d5fe-41b1-a471-19ab77188913",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 2,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 1,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Begin",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "e06c7f50-eeb4-45fb-8d62-1ae981a32085",
+                                "destinationUUID": "110fb658-d5fe-41b1-a471-19ab77188913",
+                                "sourceName": "Sensors_Data_Start",
+                                "destinationName": "PIDController_Begin",
+                                "uuid": "d5bbbe84-0f19-4e63-8de8-27d54202777a",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Min",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Min",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "-1.0",
+                    "uuid": "4c18386c-da96-4a9c-9220-33cf72c89aeb",
+                    "linkedTo": [],
+                    "pinIndex": 12,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Min",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Name",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Name",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"circleFade\"",
+                    "uuid": "47321d46-caad-42a0-b39f-99f086f650b6",
+                    "linkedTo": [],
+                    "pinIndex": 4,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Name",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Default",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Default",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "0.0",
+                    "uuid": "ee2dcabf-e716-4559-9bbd-8d4ca8d78f7a",
+                    "linkedTo": [],
+                    "pinIndex": 10,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Default",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "KI",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_KI",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "0.0",
+                    "uuid": "528e2ef5-c463-44a4-9eac-b204afe91145",
+                    "linkedTo": [],
+                    "pinIndex": 7,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "KI",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Set point",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Set point",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "93.6",
+                    "uuid": "5393d582-160a-4a2c-8c82-1c25572dcc07",
+                    "linkedTo": [],
+                    "pinIndex": 13,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Set point",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Timer",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Timer",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "0.01",
+                    "uuid": "f5796e5c-b069-46a1-9a82-b4a0220e8999",
+                    "linkedTo": [],
+                    "pinIndex": 9,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Timer",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Action",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Action",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "5a8889d5-344b-4a61-b29a-e1d30b8da74c",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "LSL_Inlet",
+                            "outPinId": 3,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 2,
+                            "lhsNodeUid": "c7ab08f7-064c-481a-8fe0-627567b63406",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Action",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "30ed9bd3-f6de-460c-b175-7dee4f482e16",
+                                "destinationUUID": "5a8889d5-344b-4a61-b29a-e1d30b8da74c",
+                                "sourceName": "LSL_Inlet_Action",
+                                "destinationName": "PIDController_Action",
+                                "uuid": "a9573145-7eb8-437d-a2b8-8c2b3e951fb0",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "KD",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_KD",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "0.015",
+                    "uuid": "15ee1fa2-9109-4bf4-a16f-55aec198f016",
+                    "linkedTo": [],
+                    "pinIndex": 8,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "KD",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Performance",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Performance",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": "[93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.859375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375, 93.99609375]",
+                    "uuid": "41d54fb9-8cd1-468b-94ef-b103c8d9de9b",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 1,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 14,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 14,
+                    "options": [
+                        1,
+                        4,
+                        8,
+                        16,
+                        256,
+                        512,
+                        1024
+                    ],
+                    "structure": 1,
+                    "alwaysList": true,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Performance",
+                        "wires": {
+                            "14": {
+                                "sourceUUID": "496a28d6-f9b8-43d0-94e0-78bc98e2f5a5",
+                                "destinationUUID": "41d54fb9-8cd1-468b-94ef-b103c8d9de9b",
+                                "sourceName": "Sensors_Data_DataOut",
+                                "destinationName": "PIDController_Performance",
+                                "uuid": "eb95eb99-429c-4fcb-ae8f-a634bc2391e7",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    },
+                    "currDataType": "FloatPin"
+                },
+                {
+                    "name": "ID",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_ID",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"26\"",
+                    "uuid": "a16823d1-f594-428d-98db-db7126ca0bd1",
+                    "linkedTo": [],
+                    "pinIndex": 5,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "ID",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Max",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Max",
+                    "dataType": "FloatPin",
+                    "direction": 0,
+                    "value": "1.0",
+                    "uuid": "dd651513-17b5-4e15-93ec-da2435c56225",
+                    "linkedTo": [],
+                    "pinIndex": 11,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Max",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Stop",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Stop",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "034e8ba0-513b-440c-bcec-2099c80bafca",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "Sensors_Data",
+                            "outPinId": 3,
+                            "rhsNodeName": "PIDController",
+                            "inPinId": 3,
+                            "lhsNodeUid": "29061e7a-3310-4893-8474-ff2ad9cea575",
+                            "rhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9"
+                        }
+                    ],
+                    "pinIndex": 3,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop",
+                        "wires": {
+                            "3": {
+                                "sourceUUID": "5977299b-6ad3-4e58-8428-31aa37957c37",
+                                "destinationUUID": "034e8ba0-513b-440c-bcec-2099c80bafca",
+                                "sourceName": "Sensors_Data_Stop1",
+                                "destinationName": "PIDController_Stop",
+                                "uuid": "8c464695-d5e0-44c5-944d-df5e5ddbe955",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "outExec",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_outExec",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "88e1b8b6-66f8-45f8-ba1d-c767442c6168",
+                    "linkedTo": [],
+                    "pinIndex": 2,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "outExec",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Data",
+                    "package": "PyFlowBase",
+                    "fullName": "PIDController_Data",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "275eeca9-2607-45b5-bbfa-bf35349e09fb",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "PIDController",
+                            "outPinId": 1,
+                            "rhsNodeName": "LSL_Outlet",
+                            "inPinId": 6,
+                            "lhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9",
+                            "rhsNodeUid": "8224aa6b-bce4-4a79-a55a-331ba75be00e"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        1,
+                        2,
+                        4,
+                        16,
+                        256,
+                        512
+                    ],
+                    "structure": 3,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Data",
+                        "wires": {
+                            "6": {
+                                "sourceUUID": "275eeca9-2607-45b5-bbfa-bf35349e09fb",
+                                "destinationUUID": "ffebc960-0084-4797-9557-0cedf07c0ef2",
+                                "sourceName": "PIDController_Data",
+                                "destinationName": "LSL_Outlet_Data",
+                                "uuid": "a7913c0c-d982-47b7-97d2-230fee27b226",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "PIDController"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">PIDController</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": 34.58649055916636,
+            "y": -84.58870002749644
+        },
+        {
+            "package": "LSLController",
+            "lib": null,
+            "type": "StreamGrapher",
+            "owningGraphName": "root",
+            "name": "LSL_Outlet",
+            "uuid": "8224aa6b-bce4-4a79-a55a-331ba75be00e",
+            "inputs": [
+                {
+                    "name": "Type",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_Type",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"PyflowStream\"",
+                    "uuid": "7fde02e6-0452-4d02-84c6-bf0274326c6f",
+                    "linkedTo": [],
+                    "pinIndex": 4,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Type",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Stop",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_Stop",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "bcbe4339-1f27-44bd-be46-a3ab30b1263d",
+                    "linkedTo": [],
+                    "pinIndex": 2,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Stop",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "ID",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_ID",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"ID2\"",
+                    "uuid": "84d51e72-da17-4372-912e-d05207bd1f30",
+                    "linkedTo": [],
+                    "pinIndex": 5,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "ID",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Name",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_Name",
+                    "dataType": "StringPin",
+                    "direction": 0,
+                    "value": "\"PyflowStream2\"",
+                    "uuid": "855bc60d-853d-4d05-9fd1-dff936fc444b",
+                    "linkedTo": [],
+                    "pinIndex": 3,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Name",
+                        "wires": {}
+                    }
+                },
+                {
+                    "name": "Data",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_Data",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "ffebc960-0084-4797-9557-0cedf07c0ef2",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "PIDController",
+                            "outPinId": 1,
+                            "rhsNodeName": "LSL_Outlet",
+                            "inPinId": 6,
+                            "lhsNodeUid": "73295956-d19a-47b6-87ab-cdadaed6cca9",
+                            "rhsNodeUid": "8224aa6b-bce4-4a79-a55a-331ba75be00e"
+                        }
+                    ],
+                    "pinIndex": 6,
+                    "options": [
+                        1,
+                        2,
+                        8,
+                        16,
+                        256,
+                        512,
+                        1024
+                    ],
+                    "structure": 3,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Data",
+                        "wires": {
+                            "6": {
+                                "sourceUUID": "275eeca9-2607-45b5-bbfa-bf35349e09fb",
+                                "destinationUUID": "ffebc960-0084-4797-9557-0cedf07c0ef2",
+                                "sourceName": "PIDController_Data",
+                                "destinationName": "LSL_Outlet_Data",
+                                "uuid": "a7913c0c-d982-47b7-97d2-230fee27b226",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Begin",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_Begin",
+                    "dataType": "ExecPin",
+                    "direction": 0,
+                    "value": "null",
+                    "uuid": "b770a633-d012-4c07-bc91-05419e7f348d",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        8,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "Begin",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "OUT",
+                    "package": "PyFlowBase",
+                    "fullName": "LSL_Outlet_OUT",
+                    "dataType": "ExecPin",
+                    "direction": 1,
+                    "value": "null",
+                    "uuid": "1591b5bc-7778-4c80-b82d-8493383d1410",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "OUT",
+                        "wires": {}
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "LSL_Outlet"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LSL_Outlet</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": 246.52502373954889,
+            "y": -57.00826342579815
+        }
+    ],
+    "depth": 1,
+    "isRoot": true,
+    "parentGraphName": "None",
+    "fileVersion": "2.0.1",
+    "activeGraph": "root"
+}

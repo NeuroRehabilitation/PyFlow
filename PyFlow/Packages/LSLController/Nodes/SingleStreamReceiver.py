@@ -7,7 +7,6 @@ from pylsl import StreamInlet, resolve_streams, pylsl
 from PyFlow.Packages.PyFlowBase.Nodes import FLOW_CONTROL_COLOR
 
 import copy
-
 import sys
 import multiprocessing
 
@@ -163,16 +162,10 @@ class SingleStreamReceiver(NodeBase):
         for i, row in enumerate(self.DataBase[key]):
             self.DataBase[key][row].append(data[i])
             # if i == 0:
-            print("Lenght"+str(len(self.DataBase[key][row])))
-            if self.inlets[-1].info().nominal_srate()==0:
-                if len(self.DataBase[key][row]==2):
-                    self.DataBase[key][row].pop(0)
-                    # self.Graph_queue.put(self.DataBase)
-                    self.DataBase = None
-                    self.DataBase = copy.deepcopy(self.StructDataBase)
+            # print("Lenght"+str(len(self.DataBase[key][row])))
 
-            elif len(self.DataBase[key][row]) > (self.inlets[-1].info().nominal_srate()):
-                print("Length" + str(len(self.DataBase[key][row])))
+            if len(self.DataBase[key][row]) > (self.inlets[-1].info().nominal_srate()):
+                # print("Length" + str(len(self.DataBase[key][row])))
                 self.DataBase[key][row].pop(0)
                 # self.Graph_queue.put(self.DataBase)
                 self.DataBase = None

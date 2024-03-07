@@ -9,7 +9,7 @@ from PyFlow.UI.UIInterfaces import IPackage
 # Class based nodes
 from PyFlow.Packages.LSLController.Nodes.SingleStreamReceiver import SingleStreamReceiver
 from PyFlow.Packages.LSLController.Nodes.MultiStreamReceiver import MultiStreamReceiver
-from PyFlow.Packages.LSLController.Nodes.SingleStreamSample import SingleStreamSample
+
 # Factories
 
 _FOO_LIBS = {}
@@ -22,7 +22,6 @@ _EXPORTERS = OrderedDict()
 
 _NODES={
 	SingleStreamReceiver.__name__: SingleStreamReceiver,
-	SingleStreamSample.__name__: SingleStreamSample,
 	MultiStreamReceiver.__name__: MultiStreamReceiver,
 	StreamGrapher .__name__: StreamGrapher,
 	StreamTransmitter.__name__: StreamTransmitter
