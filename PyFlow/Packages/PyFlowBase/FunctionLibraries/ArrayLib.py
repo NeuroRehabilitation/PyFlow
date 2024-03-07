@@ -187,7 +187,7 @@ class ArrayLib(FunctionLibraryBase):
     @staticmethod
     @IMPLEMENT_NODE(returns=None, meta={NodeMeta.CATEGORY: 'Array', NodeMeta.KEYWORDS: []})
     def arraySize(ls=('AnyPin', [], {PinSpecifiers.CONSTRAINT: '1', PinSpecifiers.ENABLED_OPTIONS: PinOptions.ArraySupported | PinOptions.AllowAny}),
-                  size=(REF, ("BoolPin", 0)),
+                  size=(REF, ("IntPin", 0)),
                   is_empty=(REF, ("BoolPin", False)),
                   not_empty=(REF, ("BoolPin", False))):
         l = len(ls)

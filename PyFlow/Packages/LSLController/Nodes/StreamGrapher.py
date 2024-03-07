@@ -17,6 +17,7 @@ class StreamGrapher(NodeBase):
         self.streamName = self.createInputPin("Name", 'StringPin')
         self.streamType = self.createInputPin("Type", 'StringPin')
         self.streamID = self.createInputPin("ID", 'StringPin')
+        self.time = self.createInputPin("Time", 'FloatPin')
         self.Data = self.createInputPin('Data', 'AnyPin', structure=StructureType.Multi)
         self.Data.enableOptions(
             PinOptions.AllowMultipleConnections | PinOptions.AllowAny | PinOptions.DictElementSupported)
@@ -44,16 +45,13 @@ class StreamGrapher(NodeBase):
         super(StreamGrapher, self).Tick(delta)
         if self.bWorking:
 
-            if time.time() - self.start >= 0.2:
+            if time.time() - self.start >= self.time.getData():
 
                 sample = list(self.Data.getData().values())
-
                 # self.addDataToDict(self.streamName.getData(), sample)
-
                 #self.Send.setData(self.DataBase)
+                print("Flag1")
                 self.outlet.push_sample(sample)
-
-
                 self.start = time.time()
 
 

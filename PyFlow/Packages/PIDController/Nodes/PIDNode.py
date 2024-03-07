@@ -27,8 +27,15 @@ class PIDController:
         self.integral_max = integral_max
         self.prev_error = 0
         self.integral = 0
+        self.lastTimeStamp = 0.0
 
-    def calculate(self, setpoint, current_value, time_delta):
+    def calculate(self, setpoint, current_value, TimeStamp):
+        time_delta = TimeStamp-self.lastTimeStamp
+
+        print(time_delta)
+
+        self.lastTimeStamp = TimeStamp
+
         error = setpoint - current_value
         self.integral += error * time_delta
 
@@ -76,9 +83,11 @@ class PIDNode(NodeBase):
 
         self.Min = self.createInputPin('Min', 'FloatPin')
 
-        self.Setpoint = self.createInputPin('Setpoint', 'FloatPin')
+        self.Setpoint = self.createInputPin('Target', 'FloatPin')
 
-        self.Performance = self.createInputPin('Performance', 'FloatPin')
+        self.Performance = self.createInputPin('In', 'FloatPin')
+        self.TimeStamp= self.createInputPin('Timestamp', 'FloatPin')
+
 
 
 
@@ -137,10 +146,9 @@ class PIDNode(NodeBase):
             if time.time() - self.start >= self.timeDelta:
 
                 self.timeDelta = self.DelayCalculation(self, round(time.time() - self.start, 3))
-
                 # self.timeDelta = ((time.time() - self.start)-self.Timer.getData())*2
                 self.start = time.time()
-                control = self.pid.calculate(self.Setpoint.getData(), self.Performance.getData(), self.Timer.getData())
+                control = self.pid.calculate(self.Setpoint.getData(), self.Performance.getData(), self.TimeStamp.getData())
                 self.default += control
                 if self._Max >= self._Min:
                     if self._Max < self.default:
@@ -166,7 +174,6 @@ class PIDNode(NodeBase):
 
                 self.Send.setData(_dict)
                 file_name = "ID" + self.ID.getData() + "_" + self.Name.getData()
-                save_json(file_name, info, self.now)
 
                 # self.Result.setData(self.default)
 
@@ -203,6 +210,6 @@ class PIDNode(NodeBase):
         interval = self.interval
         if real_interval > self.interval:
             interval += self.interval - real_interval-0.002
-            print("Interval = "+str(self.interval) + "real Interval = "+str(real_interval) + "Delay = "+str(interval))
+            #print("Interval = "+str(self.interval) + "real Interval = "+str(real_interval) + "Delay = "+str(interval))
         return interval
 
