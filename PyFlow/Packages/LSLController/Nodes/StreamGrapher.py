@@ -95,7 +95,7 @@ class StreamGrapher(NodeBase):
                 "Name": stream_name,
                 "Type": stream_type,
                 "Channels": channel_count,
-                "Sampling Rate": 20,
+                "Sampling Rate": self.time.getData(),
                 "Channels Info": self.get_all_keys(data),
             }
             info = StreamInfo(
