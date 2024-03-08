@@ -50,6 +50,7 @@ class SingleStreamSample(NodeBase):
         self.i=0
         self.counter = 0
         self.LastValue = 0
+        self.hasReceived = False
 
     def Tick(self, delta):
         super(SingleStreamSample, self).Tick(delta)
@@ -67,6 +68,9 @@ class SingleStreamSample(NodeBase):
 
 
                 if len(samples) > 0:
+                    if not self.hasReceived:
+                        self.Begin_Out.call()
+                        self.hasReceived = True
                     self.empty = True
                     self.Send.setData(samples[0][0])
                     self.Stamp.setData(timestamps[0])
@@ -105,6 +109,7 @@ class SingleStreamSample(NodeBase):
         return "Description in rst format."
 
     def stop(self, *args, **kwargs):
+        self.hasReceived = False
         self.bWorking = False
 
 
@@ -158,7 +163,7 @@ class SingleStreamSample(NodeBase):
             self.inlets.append(inlet)
 
             self.online = True
-            self.Begin_Out.call()
+
 
     def addDataToDict(self, key, data):
         for i, row in enumerate(self.DataBase[key]):
