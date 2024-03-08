@@ -71,7 +71,7 @@ class SingleStreamSample(NodeBase):
                     self.Send.setData(samples[0][0])
                     self.Stamp.setData(timestamps[0])
                     self.i = self.i + 1
-                    print(samples)
+                    #print(samples)
                     # Process the received samples
                     # for sample, timestamp in zip(samples, timestamps):
                     #     self.i= self.i+1;

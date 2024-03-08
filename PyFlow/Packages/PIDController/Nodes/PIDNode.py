@@ -32,7 +32,7 @@ class PIDController:
     def calculate(self, setpoint, current_value, TimeStamp):
         time_delta = TimeStamp-self.lastTimeStamp
 
-        print(time_delta)
+        #print(time_delta)
 
         self.lastTimeStamp = TimeStamp
 

@@ -50,7 +50,7 @@ class StreamGrapher(NodeBase):
                 sample = list(self.Data.getData().values())
                 # self.addDataToDict(self.streamName.getData(), sample)
                 #self.Send.setData(self.DataBase)
-                print("Flag1")
+                #print("Flag1")
                 self.outlet.push_sample(sample)
                 self.start = time.time()
 
