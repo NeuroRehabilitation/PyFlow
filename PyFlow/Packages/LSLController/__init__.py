@@ -9,6 +9,8 @@ from PyFlow.UI.UIInterfaces import IPackage
 # Class based nodes
 from PyFlow.Packages.LSLController.Nodes.SingleStreamReceiver import SingleStreamReceiver
 from PyFlow.Packages.LSLController.Nodes.MultiStreamReceiver import MultiStreamReceiver
+from PyFlow.Packages.LSLController.Nodes.SingleStreamGrapher import SingleStreamGrapher
+from PyFlow.Packages.LSLController.Nodes.MultiStreamGrapher import MultiStreamGrapher
 from PyFlow.Packages.LSLController.Nodes.SingleStreamSample import SingleStreamSample
 # Factories
 
@@ -24,6 +26,8 @@ _NODES={
 	SingleStreamReceiver.__name__: SingleStreamReceiver,
 	SingleStreamSample.__name__: SingleStreamSample,
 	MultiStreamReceiver.__name__: MultiStreamReceiver,
+	SingleStreamGrapher.__name__: SingleStreamGrapher,
+	MultiStreamGrapher.__name__: MultiStreamGrapher,
 	StreamGrapher .__name__: StreamGrapher,
 	StreamTransmitter.__name__: StreamTransmitter
 }

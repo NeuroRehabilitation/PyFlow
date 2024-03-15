@@ -8,12 +8,12 @@ import time
 import logging
 from multiprocessing import Queue
 
-import qtpy.QtWidgets
+import qtpy.QtWidgets as QtWidgets
 import qtpy.uic as uic
 import numpy as np
 import pyqtgraph as pg
 from qtpy.QtWidgets import QHBoxLayout, QComboBox, QSpinBox, QRadioButton, QLabel, QDoubleSpinBox, QWidget, \
-    QFrame, QAction
+QFrame, QAction
 from pyqtgraph.Qt import QtCore
 
 
@@ -33,7 +33,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, QU: Queue, *args, **kwargs, ):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.stream_info = None
-        ui_file = os.path.abspath('PyMonitorUi15.ui')
+
         # self.setWindowIcon(QtGui.QIcon("Pymonitor_Logo.png"))
         # Load the UI Page
         uic.loadUi('PyMonitorUi16.ui', self)
@@ -683,18 +683,18 @@ class MainWindow(QtWidgets.QMainWindow):
             # self.ListSamplingRate[layout.index(dis)] = dis["Sampling_Rate"]
 
     def main(self, q):
-        # print(1)
+        print(1)
         app = QtWidgets.QApplication(sys.argv)
-        # print(2)
+        print(2)
         main = MainWindow(q)
-        # print(3)
+        print(3)
         main.show()
-        # print(4)
+        print(4)
         sys.exit(app.exec_())
-        # print(5)
+        print(5)
 
 
 def Run(q):
-    # main = MainWindow
-    print("Run")
-    #main.main(main, q)
+    main = MainWindow
+    # print("Run")
+    main.main(main, q)
